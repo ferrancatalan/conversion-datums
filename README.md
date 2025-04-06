@@ -2,7 +2,15 @@
 
 This MATLAB project converts geodetic coordinates from the WGS84 datum to the ED50 datum using a 3-parameter transformation (?X, ?Y, ?Z). It supports individual and batch coordinate conversion.
 
-[![](https://mermaid.ink/img/pako:eNqFjctugzAURH_FumuCDJjYWFUkAlU3dNOH2iZ04cYOoAY7ckB9IP69DlUrlU1ndWd0Zu4AOyMVcNgfzNuuFrZDxU2pkVO6fbi6ZQTl6d399cWLXRVFijJjrGy06NTpGS0WK7SeU49Pmz_U99h6grPtZR7j_9hsYvMZO_8OHlS2kcA72ysPWmVbcbYwnFdK6GrVqhK4O6WwryWUenSdo9AbY9qfmjV9VQPfi8PJuf4o3XbeiMqK9je1SktlM9PrDnhCpw3gA7wDDwj2l8ESh5RFIY6CMPbgw8Ux85OIEkYoCcIAJ2T04HN6i31GY-wUJpQRTBM2fgGOynPW?type=png)](https://mermaid.live/edit#pako:eNqFjctugzAURH_FumuCDJjYWFUkAlU3dNOH2iZ04cYOoAY7ckB9IP69DlUrlU1ndWd0Zu4AOyMVcNgfzNuuFrZDxU2pkVO6fbi6ZQTl6d399cWLXRVFijJjrGy06NTpGS0WK7SeU49Pmz_U99h6grPtZR7j_9hsYvMZO_8OHlS2kcA72ysPWmVbcbYwnFdK6GrVqhK4O6WwryWUenSdo9AbY9qfmjV9VQPfi8PJuf4o3XbeiMqK9je1SktlM9PrDnhCpw3gA7wDDwj2l8ESh5RFIY6CMPbgw8Ux85OIEkYoCcIAJ2T04HN6i31GY-wUJpQRTBM2fgGOynPW)
+## :arrows_clockwise: Coordinate Transformation Flow
+
+The diagram below shows the step-by-step transformation process from WGS84 to ED50:
+
+<img alt="Wired image" src="docs/flow.png">
+
+- *LLA*: Latitude, Longitude, Altitude
+- *XYZ*: Cartesian coordinates
+- The conversion applies a simple 3-parameter shift (?X, ?Y, ?Z) in XYZ space between the datums.
 
 ## :rocket: How to use
 
@@ -55,19 +63,6 @@ This MATLAB project converts geodetic coordinates from the WGS84 datum to the ED
     -0.3760533289, 39.4709981237, 13.75838202
     1.5186032376, 41.3834232125, 18.60388215
     ```
-## :arrows_clockwise: Coordinate Transformation Flow
-
-The diagram below shows the step-by-step transformation process from WGS84 to ED50:
-
-mermaid
-flowchart LR
-A[WGS84 DATUM<br>LLA Coordinates] --> B[WGS84 DATUM<br>XYZ Coordinates]
-B --> C[ED50 DATUM<br>XYZ Coordinates]
-C --> D[ED50 DATUM<br>LLA Coordinates]
-
-- *LLA*: Latitude, Longitude, Altitude
-- *XYZ*: Cartesian coordinates
-- The conversion applies a simple 3-parameter shift (?X, ?Y, ?Z) in XYZ space between the datums.
 
 ## :pushpin: Notes
 
